@@ -1,0 +1,6 @@
+Measurement,SampleID,Treatment_1,Treatment_2,Notes
+0.345,1,cold,fast,subject_calm
+1.342,2,warm,slow,subject_calm
+3.956,3,warm,fast,subject_calm
+0.223,4,cold,slow,subject_calm
+0.991,5,freezing,slow,subject_calm
