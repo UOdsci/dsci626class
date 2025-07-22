@@ -1,0 +1,42 @@
+---
+title: "Exercise 1 (Unix Introduction) // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Exercise 1
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+
+## Here are some command line tasks to try for practice!
+
+Save a digital record (i.e. a plain text file) of your work so that you can study it later if you need to.
+
+1. Open up a terminal and execute the following using UNIX commands
+    - print your working directory
+    - navigate to a directory somewhere below your home directory where you want to practice writing files
+    - make 5 directories called dir_1, dir_2, dir_3, etc.
+    - within each of those directories create empty files called file_1, file_2, and file_3.
+    - open file_1 using any plain text editor (e.g. nano, pico, BBEdit, etc.), type a few words, and save it.
+    - print file_1 in dir_1 to the terminal.
+    - delete all files in dir_3.
+    - list all of the contents of your current directory, line-by-line.
+    - delete dir_3.
+
+2. Download the file `example_gff.tsv` from Canvas for the following tasks
+    - navigate to dir_1
+    - copy `example_gff.tsv` (using its absolute path) to your current directory
+    - delete the copy of `example_gff.tsv` that is in your current directory, then copy it again from where it was downloaded, but using a relative path this time.
+    - use at least 3 different UNIX commands to look at all or parts of `example_gff.tsv`
+    - what is the file size of `example_gff.tsv`?
+    - how many lines does `example_gff.tsv` have?
+    - how many lines in the file begin with "LG5"
+    - how many unique entries are there in the 3rd field (column) of the file?
+    - sort the file based on reverse numeric order of field (column) 6
+    - capture fields 1, 2, and 9 and write to a new file called `3_cols.tsv`
+    - replace all instances of "LG" with "linkage_group" and print to the terminal
+    - selecting only "LG14" rows, capture fields 1, 2, 3, and 4, but only include lines with a field 5 value of at least 6100000, and write this output to a file called `LG14_subset.txv` (hint: using "pipes" and "carrot" will help you here)
+
+
+

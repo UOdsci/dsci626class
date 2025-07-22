@@ -1,0 +1,42 @@
+#### Steps for building and installing minimal R package with tutorial
+
+cd to directory with the package name
+
+mkdir R
+
+nano DESCRIPTION
+# In file should simply include (for now):
+Package: foundstats
+Version: 0.1
+#(update with future versions)
+
+put any R scripts in the R directory (e.g. a dummy script for now, called learn_stats.R)
+
+mkdir inst/
+mkdir inst/tutorials/
+mkdir inst/tutorials/rtutorial_1
+
+put the rtutorial_1.Rmd file in rtutorial_1/
+
+Invoke R from terminal, and assuming that devtools pkg has been installed:
+make sure you are in the directory with the package name.
+build()
+install()
+
+*This will write a package_name.vXX.tar.gz file in the dir. above your package directory.
+
+
+
+
+
+
+## Student instructions for how to install Foundational Stats R Tutorials:
+
+
+install.packages("learnr")
+
+install.packages("/path/on/your/system/to/foundstats_0.1.tar.gz", repos=NULL, type="source")
+
+library(foundstats)
+
+learnr::run_tutorial("rtutorial_1", package = "foundstats")

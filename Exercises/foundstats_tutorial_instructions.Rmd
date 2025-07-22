@@ -1,0 +1,51 @@
+---
+title: R tutorial installation instructions // Foundational Statistics Data Sci. DSCI
+  626
+layout: page
+description: Instructions for running course R tutorials with learnr
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Follow the steps below, and the tutorial should appear in your default browser
+
+1. Download the file `foundstats_0.1.tar.gz` from Canvas.
+
+2. Open up a new `RStudio` session and at the Console (lower left pane) type and run:
+
+```{r install learnr, echo=TRUE, eval=FALSE}
+install.packages("learnr")
+```
+
+You will only need to install the `learnr` package just this one time, and not for future tutorials.
+
+
+3. Next type and run:
+
+```{r install foundstats, echo=TRUE, eval=FALSE}
+install.packages("/path/on/your/system/to/foundstats_0.1.tar.gz", repos=NULL, type="source")
+```
+
+Note that you will have to change the path in the command above to wherever you downloaded `foundstats_0.1.tar.gz` on your computer.
+
+
+4. Load the tutorial package (which I've named `foundstats`) by typing and running:
+
+```{r load learnr, echo=TRUE, eval=FALSE}
+library(foundstats)
+```
+
+
+5. Load the 1st tutorial (called "rtutorial_1") by typing and running:
+
+```{r load tutorial, echo=TRUE, eval=FALSE}
+learnr::run_tutorial("rtutorial_1", package = "foundstats")
+```
+
+
+Now the tutorial should load in your browser, and you will be able to interact with it. The format is pretty intuitive. Follow the instructions and work through the exercies at your own pace. You'll notice that you can alter (or type your own) code in the "Code" boxes, and then run the code by clicking on the buttons on the right. You can also clear the results from a given block using the "Start Over" button, or clear the results for the whole tutorial using the small "Start Over" button in the left margin. You'll find a mixture of coding exercies and "multiple choice" questions. In some places I've included "hints," which you can reveal by pressing the "Hint" buttons. Have fun with the exercises, feel free to work remotely with your peers, and if any questions or problems arise, send me a message or bring them up during office hours!
