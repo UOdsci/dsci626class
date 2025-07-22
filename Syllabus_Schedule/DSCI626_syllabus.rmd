@@ -1,0 +1,175 @@
+---
+title: "Foundational Statistics // DSCI 626 // Spring 2025"
+layout: page
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+description: Syllabus
+---
+
+See [the schedule](DSCI626_schedule.html) for topics by week.
+
+## Instructors:
+
+Dr. Clay Small, csmall@uoregon.edu
+
+## Course Information
+
+**Class/Study Hours:**
+Tu/Th 12:00 PM – 1:20 PM (191 Anstett Hall)
+
+**Office Hour:**
+Th 3:00 PM – 4:30 PM (204 Pacific Hall), or by appointment via email at least 2 days in advance.
+
+
+## Description of the course
+
+This course in an introduction to data management, data visualization, and statistical
+inference. It is intended for early-stage graduate students with no background in
+statistics. No prior coursework (undergraduate or graduate) in statistics or
+programming is assumed. The primary objective of the course is to get students up to
+speed with respect to organization, manipulation, visualization, and analysis of data,
+using the R statistical language. The emphasis on application is strong, with the goal
+of enabling students (after the course) to analyze their own data sets with confidence
+using reasonable approaches, and, when faced with more difficult analysis problems,
+to be able to communicate their inference objectives clearly to expert analysts.
+Students will learn to organize and analyze data sets in the form of RStudio projects,
+using R Markdown files to reproducibly capture and render code, visualizations, and
+analyses. In-class exercises will be delivered in the form of pre-formatted R
+Notebooks, which can be interactively executed by students without having to write
+all code from scratch.
+
+The course is designed to acquaint students primarily with univariate (single
+response variable) analysis. Multivariate analysis will be covered in the Advanced
+Biostatics 2-course series offered during the Fall and Winter terms. Examples and
+assignments in class will include data sets from many disciplines, including biological and clinical fields, social sciences, and physical sciences. For specific statistical topics covered in class, please see the course goals and tentative schedule below.
+
+## Course Objectives and Expected Learning Outcomes:
+
+Students will acquire the following skills/knowledge in data organization, programmatic manipulation, and visualization:
+
+1. Properly organize and format primary data and metadata files for analysis
+2. Learn programming fundamentals of the R statistical language, including
+    objects, functions, iteration, and simulation
+3. Make publication-quality data visualizations, including scatterplots, boxplots,
+    frequency distributions, mosaic plots, etc.
+
+Students will acquire the following skills and knowledge in fundamental statistical inference:
+
+1. Understand Type I and Type II statistical error, including p-values and power analysis
+2. Understand ordinary least-squares regression and linear models in general
+3. Learn the fundamentals of strong experimental design
+4. Learn to apply general linear models to basic univariate analysis problems,
+    including Analysis of Variance (ANOVA)
+5. Learn nonparametric approaches to parameter estimate and statistical
+    inference, including resampling (bootstrapping), permutation, and rank-
+    based analysis
+6. Understand how to analyze binary response variables and frequency-based
+    (e.g. contingency table) data sets
+
+## Course Organization
+
+**Course structure:** We will hold class on Tuesdays and Thursdays from 12:00 PM to 1:20 PM. These meetings will usually begin with a 20-30 min. review of the most salient topics from the course book, often including some R coding demonstrations. In most cases, videos of these reviews from a prior term will be made available as a supplemental resource. The remaining hour of the meeting time will be reserved for active learning, including work on in-class and exercises and problem sets, question sharing and feedback, and discussion of the topics/problems at hand. I encourage students to work on exercises and assignments during these periods so that questions can be directly addressed as they emerge, and so that collaborative learning among peers is emphasized.
+
+For most students, in-class participation is more engaging and results in better learning outcomes, so I strongly encourage in-person attendance. However, I know that things happen in life that might make you unable to come -- for instance, please do not come to class if you are sick.
+
+**Short exercises:** During the first few weeks of class, you will gain practice via small workbook-style assignments. It is anticipated that you will be able to complete most of these in one short sitting. While these assignments will not be graded per se, students will receive participation points based on their commitment to these exercises, through a weekly Canvas post (< 1 page), which may include a summary of what they learned from the exercises - 10% of grade
+
+**Problem sets:** Students will be assigned 4-5 problem sets (roughly one every 2 weeks) to complete independently. These will mostly focus on one or a few data sets each, and the goal will be for the students to organize, visualize, analyze, and interpret the data sets in light of specific scientific motivations. - 90% of grade
+
+**Preparing and submitting assignments:** The information required to complete all
+in-class assignments and problem sets will be given in instructions on Canvas. Students should carefully follow the detailed instructions associated with each assignment.
+Students are encouraged to work together and share information. In particular,
+some students will have a higher skill level than others, and we encourage those
+students with more experience to help their peers. *However, no direct sharing
+of code is allowed – each student must write their own code.*
+
+Assignments will be submitted on Canvas in the form of R Markdown files, with
+the rendered html output. Be sure to include your name on the document. Be
+professional – appropriately name your files, make sure they are organized, and
+submit only the information requested. Late assignments will not be accepted.
+
+Final grades will be based on the percentage of assigned points earned, and thresholds for letter grades will be chosen relative to the overall performance of the class, to reflect a graduate-level course: A: good, demonstrates competence in all topics; B: acceptable, demonstrates competence in most topics; C: unsatisfactory.
+
+
+
+## Textbooks
+
+The text book and primary content delivery for this course is an online "gitbook" written by the instructors, in "bookdown" format. The course book may be found [here](https://uo-biostats.github.io/Found_Stat/).
+
+Additional introductory statistics books like this one may be helpful:
+* Logan, M. 2010. *Biostatistical Design and Analysis Using R.* Wiley-Blackwell.
+    A fairly comprehensive book that covers how to use R
+
+## Software:
+* Latest version of R ([install here](https://www.r-project.org))
+* Latest, free version of RStudio Desktop ([install here](https://posit.co/downloads/))
+* A terminal that allows ssh connection to the UO computing cluster (Talapas)
+
+## Prerequisites:
+None. A practical knowledge of basic algebra may be helpful.
+
+## Inclusion and accessibility
+Please tell us your preferred pronouns and/or name,
+especially if it differs from the class roster.
+We take seriously our responsibility to create inclusive learning environments.
+Please notify us if there are aspects of the instruction or design of this
+course that result in barriers to your participation! The Accessible Education Center (AEC) assists students with disabilities in reducing campus-wide and classroom-related barriers. If you have or think you have a disability, please consult [this page](https://aec.uoregon.edu/content/what-disability), and for additional consultation please contact the AEC to discuss appropriate accommodations or support. Visit 360 Oregon Hall or aec.uoregon.edu for more information. You can contact AEC at 541-346-1155 or via email at uoaec@uoregon.edu).
+
+## Absence Policy
+It is expected that students will attend class unless extenuating circumstances prevent them from doing so. If possible, students should notify the instructor prior to class (or within 2 days of the absence) to receive information about any missed material or work. It is the responsibility of the student to make sure any missed material is acquired and any missed assignments are submitted within a reasonable time frame.
+
+## Incomplete Policy
+A grade of "I" (Incomplete) represents an agreement between an instructor and a student to extend the deadline for coursework completion. Incompletes shall be granted when the instructor determines that the student meets all the following criteria. The student:
+
+* has been making satisfactory progress on coursework as determined by the criteria in the syllabus;
+* has been active in the course;
+* is unable to complete a portion of the course requirements due to extenuating circumstances beyond their control that occurred after the last day to drop a class (End of Week 7 of Fall/Winter/Spring terms; variable dates for summer courses);
+* is able to independently complete the remaining requirements without attending additional classes beyond the term or receiving additional instruction; and
+* requests an Incomplete by the published deadline
+
+For complete information and instruction on grades of Incomplete, visit [this page](https://provost.uoregon.edu/grades-incompletes-policy)
+
+## Reporting Obligations
+I am a designated reporter. For information about my reporting obligations as an employee, please see Employee Reporting Obligations on the Office of Investigations and Civil Rights Compliance (OICRC) website. Students experiencing sex or gender-based discrimination, harassment or violence should call the 24-7 hotline 541-346-SAFE [7244] or visit safe.uoregon.edu for help. Students experiencing all forms of prohibited discrimination or harassment may contact the Dean of Students Office at 5411-346-3216 or the non-confidential Title IX Coordinator/OICRC at 541-346-3123 to request information and resources. Students are not required to participate in an investigation to receive support, including requesting academic supportive measures. Additional resources are available at investigations.uoregon.edu/how-get-support.I am also a mandatory reporter of child abuse. Please find more information at Mandatory Reporting of Child Abuse and Neglect. See [this page](https://investigations.uoregon.edu/suggested-syllabus-language) for recommended syllabus language that is more complete.
+
+## Access and Accommodations
+The University of Oregon and I are dedicated to fostering inclusive, equitable, and accessible learning environments for all students. The Accessible Education Center (AEC) assists students with disabilities in reducing barriers in the educational experience. You may be eligible for accommodations for a variety of disabilities – apparent disabilities, such as a mobility or physical disability, or non-apparent disabilities, such as chronic illnesses or psychological disabilities. If you have or think you have a disability and experience academic barriers, please contact the Accessible Education Center (Location: 360 Oregon Hall; 541-346-1155; uoaec@uoregon.edu) to discuss appropriate accommodations or support. The details of your disability will be kept confidential with the AEC and you are not expected to share this information with others. However, I invite you to discuss any approved accommodations or access needs at any time with me.
+
+## Accommodation for Religious Observances
+The university makes reasonable accommodations, upon request, for students who are unable to attend a class for religious obligations or observance reasons, in accordance with the university discrimination policy which says “Any student who, because of religious beliefs, is unable to attend classes on a particular day shall be excused from attendance requirements and from any examination or other assignment on that day. The student shall make up the examination or other assignment missed because of the absence.” To request accommodations for this course for religious observance, visit the Office of the Registrar's [website](https://registrar.uoregon.edu/calendars/religious-observances) and complete and submit to the instructor the “Student Religious Accommodation Request” form prior to the end of the second week of the term.
+
+## Accommodation for Military and Federal Agency Deployment
+The University of Oregon A student that is a member of the military, a member of the commissioned corps of the National Oceanic and Atmospheric Administration or a member of the Public Health Service of the United States Department of Health and Human Services detailed by proper authority for duty with the Army or Navy and who is ordered to federal or state active duty, or called to unit training, assembly or annual training, regardless of the length of duty or training, and who presents verification of active duty/reserve component training, has the following rights:
+
+* The student may drop or withdraw from courses, with refund, even after published deadlines; or 
+* Receive a grade of incomplete and, upon release from active duty/reservist training, complete the course in accordance with the University of Oregon’s practice for completion of incomplete courses; or 
+* Continue and complete the course for credit subject to the conditions in section 4 of this policy (see link below).
+If this applies to you, please let me know as early in the term as possible so that we can explore appropriate accommodations. The complete policy can be found here: Military and Federal Agency Deployment Accommodation Rights
+
+## Pregnancy Modifications
+Pregnant and parenting students are eligible for academic and work modifications related to pregnancy, childbirth, loss of pregnancy, termination of pregnancy, lactation, and related medical conditions. To request pregnancy-related modifications, students should complete the Request for Pregnancy Modifications form on the OICRC website. OICRC coordinates academic and other modifications for pregnant and parenting students to ensure students can continue to access their education and university programs and activities.
+
+## Academic Misconduct  
+The University Student Conduct Code (available at conduct.uoregon.edu) defines academic misconduct. Students are prohibited from committing or attempting to commit any act that constitutes academic misconduct. By way of example, students should not give or receive (or attempt to give or receive) unauthorized help on assignments or examinations without express permission from the instructor. Students should properly acknowledge and document all sources of information (e.g. quotations, paraphrases, ideas) and use only the sources and resources authorized by the instructor. If there is any question about whether an act constitutes academic misconduct, it is the students’ obligation to clarify the question with the instructor before committing or attempting to commit the act. Additional information about a common form of academic misconduct, plagiarism, is available [here](https://researchguides.uoregon.edu/citing-plagiarism).
+
+## Academic Disruption due to Campus Event or Emergency  
+In the event of a campus event or emergency that disrupts academic activities, course requirements, deadlines, and grading percentages are subject to change. Information about changes in this course will be communicated as soon as possible by email, and on Canvas. If we are not able to meet face-to-face, students should immediately log onto Canvas and read any announcements and/or access alternative assignments. Students are also expected to continue coursework as outlined in this syllabus or other instructions on Canvas.
+
+## Inclement Weather  
+It is generally expected that class will meet unless the University is officially closed for inclement weather. If it becomes necessary to cancel class while the University remains open, this will be announced on Canvas and by email. Updates on inclement weather and closure are also communicated in other ways described [here](https://hr.uoregon.edu/content/inclement-weather-immediate-updates).
+
+## Mental Health and Wellness  
+Life at college can be very complicated. Students often feel overwhelmed or stressed, experience anxiety or depression, struggle with relationships, or just need help navigating challenges in their life. If you're facing such challenges, you don't need to handle them on your own--there's help and support on campus. 
+
+As your instructor if I believe you may need additional support, I will express my concerns, the reasons for them, and refer you to resources that might be helpful. It is not my intention to know the details of what might be bothering you, but simply to let you know I care and that help is available. Getting help is a courageous thing to do—for yourself and those you care about.
+
+University Health Services help students cope with difficult emotions and life stressors. If you need general resources on coping with stress or want to talk with another student who has been in the same place as you, visit the Duck Nest (located in the EMU on the ground floor) and get help from one of the specially trained Peer Wellness Advocates. Find out more [here](health.uoregon.edu/ducknest). 
+University Counseling Services (UCS) has a team of dedicated staff members to support you with your concerns, many of whom can provide identity-based support. All clinical services are free and confidential. Find out more at counseling.uoregon.edu or by calling 541-346-3227 (anytime UCS is closed, the After-Hours Support and Crisis Line is available by calling this same number).
+
+## Basic Needs  
+Any student who has difficulty affording groceries or accessing sufficient food to eat every day, or who lacks a safe and stable place to live and believes this may affect their performance in the course is urged to contact the Dean of Students Office (346-3216, 164 Oregon Hall) for support.
+
+This UO [webpage](https://blogs.uoregon.edu/basicneeds/food/) includes resources for food, housing, healthcare, childcare, transportation, technology, finances, and legal support: 
+
