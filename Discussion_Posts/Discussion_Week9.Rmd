@@ -1,0 +1,27 @@
+---
+title: "Week 9 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 9 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 9 Post (5 points). Submit by Tuesday, June 3rd
+
+### 1. If you have ever performed an analysis to examine the relationship between two quantitative variables (e.g. correlation or regression), or the relationship between a quantitative response and at least one factor with more than 2 levels (e.g. ANOVA), in your own research or as part of a project for another class, briefly describe that analysis.
+
+  - What were the variables and why were you interested in comparing them?
+  
+  - What approach was used (estimation of correlation coefficients, OLS regression, ANOVA, etc.), and what were the hypothesis tests, if any?
+  
+  - Based on the content in Chapters 12-13 of the gitbook, what would you change about how you performed the analysis?
+  
+<br>
+
+### If you haven't performed that type of analysis yourself, instead briefly describe a scientific paper in which one of the above analyses was applied. Answer the above questions, but with respect to the analysis in the paper.

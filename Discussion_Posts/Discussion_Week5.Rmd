@@ -1,0 +1,25 @@
+---
+title: "Week 5 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 5 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 5 Post (5 points). Submit by Friday, May 2nd
+
+### 1. Briefly discuss what parts of Problem Set 1 were the most challenging for you. If nothing in the assignment itself was particularly challegning, what concepts in R have been the hardest for you to get the hang of?
+   
+<br>
+
+### 2. At this point we have relied on 4 primary learning materials (the course book, "lectures" / coding demos, `learnr` tutorials, and the `.Rmd` problem set). Briefly discuss which of these you have found the most useful and why. Also feel free to comment on any of these in general. 
+
+<br>
+
+### Optional: Given that we are approaching the half-way point in the term, if you want, please take this opportunity to suggest topics or tasks that you might like to see as part of an in-class coding demonstration.

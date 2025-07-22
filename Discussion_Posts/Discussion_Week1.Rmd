@@ -1,0 +1,31 @@
+---
+title: "Week 1 Discussion // Foundational Statistics for Data Science DSCI 626"
+layout: page
+description: Prompt for Week 1 discussion post
+output:
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. They should be submitted in Canvas by midnight on Friday of the week assigned, unless otherwise noted. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary.
+
+## Week 1 Post (5 points)
+
+1. Give a brief summary of your experience with statistics
+    - Have you taken any classes as a grad or undergrad, and if so which ones?
+    - What statistical analysis software have you used?
+    - If you have ever used R to visualize or analyze data from your research, how was your experience?
+
+
+2. Answer the following questions briefly (like in 1 sentence) and as quickly as possible based on your current perspective (no Googling!).
+    - Describe in your own words what a p-value is.
+    - Describe what the term "bootstrapping" means to you.
+    - What does the term "independent samples" in an experiment or study mean to you? 
+
+3. What are you most interested in learning from this class?
+    - Describe what types of data you currently (or eventually want to) work with.
+    - Are you planning to take more advanced coursework beyond this class?
+
+
+

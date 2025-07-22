@@ -1,0 +1,19 @@
+---
+title: "Week 7 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 7 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 7 Post (5 points). Submit by Monday, May 19th
+
+### 1. Briefly discuss the most important thing you learned (that you didn't already know) from the Chapter 11 course material and/or lecture (on hypothesis testing).
+
+### 2. Also comment on how you feel about your understanding of *p*-values for hypothesis tests. Do *p*-values make more sense to you after reading Chapter 11? If not, explain what is still confusing or unclear about them. Re-visit your response about *p*-values from the first discussion post, and comment on how your understanding has changed, if at all. You might be surprised! :)

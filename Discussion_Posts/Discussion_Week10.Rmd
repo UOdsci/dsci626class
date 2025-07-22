@@ -1,0 +1,57 @@
+---
+title: "Week 10 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 10 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Week 10 Post (10 points). Submit by Friday, June 13th
+
+Answer the following questions about the course. Feel free to elaborate as much as you want! Also, this is not really a "discussion," unless you want to talk to me about your responses. Your responses will be kept private.
+
+
+### 1. What was the most valuable topic, skill, or tool you learned during this course?
+
+<br>
+
+### 2. If there was a topic, analysis, or theme that we didn't cover, but you could add to this course, what would it be?
+
+<br>
+
+### 3. If there was a topic, analysis, or theme you could remove from this course, what would it be?
+
+<br>
+
+### 4. In terms of course material, what was your biggest struggle during this course?
+
+<br>
+
+### 5. In terms of logistics of the course, including interaction with the instructor/students, what was your biggest struggle?
+
+<br>
+
+### 6. Which of the following describes your ability to perform the analyses covered in this course, if you wanted to perform them ***with your own data sets***?
+- I could perform all of the analyses we covered.
+
+- I could perform some of the analyses we covered.
+
+- I couldn't perform any of the analyses we covered.
+
+<br>
+
+### 7. Do you think you could perform an analysis in `R` that we didn't cover, if you wanted to analyze your own data set?
+
+<br>
+
+### 8. If this course could be offered "remotely" (e.g. with Zoom or recorded lectures) in the future, would you prefer that to in-person delivery?
+
+<br>
+
+### 9. If you had to estimate, how many hours would you say you spent on each of the 4 problem sets?
+
+<br>
+
+### 10. If you have any other comments you think would improve this course in the future, regardless of whether it is remote or in-person, please feel free to include them below. Thank you!

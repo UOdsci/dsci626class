@@ -1,0 +1,30 @@
+---
+title: "Week 2 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 2 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 2 Post (5 points). Submit by Friday, April 11th
+
+### 1. Give a brief summary of your experience at the "command line."
+    
+ - If you had a lot of experience prior to this class, describe the context (for example, do you use shell scripting on a regular basis for your work? If so, with what types of files?)
+ - If you didn't have a lot of experience, how did the first "Unix exercise" from this class go?
+ - Was the UNIX assignment 1. Basic and easy, 2. Familar but a good refresher, or 3. Completely new and challenging?
+
+
+### 2. Describe in several sentences what your normal routine is for organizing your research projects.
+
+Specifically regarding your raw data and data files. Some examples of things to touch on might include:
+
+ - How you organize the projects on your computer. Do you have a specific directory structure? 
+ - What format do you use for primary data entry? Maybe this is Excel, maybe plain text files, maybe a mix.
+ - Do you ever use "README" files, "project summary" files, or some other annotation system for your work?

@@ -1,0 +1,21 @@
+---
+title: "Week 6 Discussion // Foundational Statistics Data. Sci. DSCI 626"
+layout: page
+description: Prompt for Week 6 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 6 Post (10 points). Submit by Tuesday, May 13th
+
+### 1. Briefly discuss what parts of Problem Set 2 have been the most challenging for you. Also comment on the idea of simulating data sets, which was a focus of the problem set. Did you find the exercise of thinking about the sampling process useful? Do you see yourself doing small-scale simulations in the future to better understand sampling error and how it might affect your studies?
+   
+<br>
+
+### 2. Last week, and in Chapter 10, we introduced a number of study/experimental design concepts. Describe how you have used one or more of these principles in your own studies or experiments. If you haven't really applied these concepts, give a hypothetical example of how you might, in future studies related to your research.

@@ -1,0 +1,31 @@
+---
+title: "Week 3 Discussion // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Prompt for Week 3 discussion post
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+## Discussion posts
+Assigned on a weekly basis, these are intended to capture your reflections, ideas, questions, difficulties, learning outcomes, etc. for the week. Please take them seriously, and try to write thoughtfully. In most cases they should be at least a few hundred words in length. In some weeks I will ask for more targeted responses than others. I also encourage you to read each others' posts from time to time and provide constructive commentary. Folks auditing the course need not participate, but feel free to if you want!
+
+
+## Week 3 Post (5 points). Submit by end of Friday, April 18th
+
+### 1. Now that you've had a chance to write bits of `R` code, describe your experiences with `R` so far.
+   
+ - What have you liked (and disliked) about the language, syntax, `RStudio`, etc.
+ 
+ - Maybe you know another language and want to draw comparisons, for example.
+ 
+ - If you learned `R` before this class describe what you now appreciate or find easier, relative to when you started.
+
+### 2. Find an `R` function that we haven't covered yet in class, and write a brief summary of it. This can be a function from base R or a stand-alone package.
+
+ - What does it do, and do you see yourself using it in the future?
+ 
+ - What arguments does it accept?
+ 
+ - I would recommend checking out the help file for detailed information.
