@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --partition=compute       ### Partition (like a queue in PBS)
+#SBATCH --job-name=wheat_sims      ### Job Name
+#SBATCH --output=wheat_sims.1.out         ### File in which to store job output
+#SBATCH --error=wheat_sims.1.err          ### File in which to store job error messages
+#SBATCH --time=0-01:00:00       ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1               ### Node count required for the job
+#SBATCH --ntasks-per-node=1     ### Number of tasks to be launched per Node
+
+Rscript /projects/nereus/csmall/foundstats/wheat_demo/02_Power_Talapas.R

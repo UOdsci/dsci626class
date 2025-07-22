@@ -1,0 +1,82 @@
+---
+title: "DSCI 626: Assignment Whatever"
+author: "Clay Small"
+date: "April 15, 2024"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This is an exercise in R to manipulate and plot fish gene expression data
+
+
+(In this course we will "knit" all assignments to .html files. Other formats like .pdf and .doc are possible, but not as reliable across all operating systems)
+
+# Experiment with headers
+## Try a second-level header
+### Or a third-level header
+
+
+
+Text can easily be *italicized* or **bolded** or ***both***
+
+
+You can make a list by leaving a space
+
+* and then entering asterisks for each item
+* item 2
+
+
+Here is a useful link: [Rmd intro by RStudio](https://rmarkdown.rstudio.com/articles_intro.html)
+
+Here is another: [R Markdown cheat sheet](https://rmarkdown.rstudio.com/lesson-15.html)
+
+
+
+
+Now let's get to some R code
+
+```{r}
+#Draw 5 obs. from normal dist with mean 20 and st.dev. 1
+rnorm(5,20,1)
+```
+
+
+Let's import a data file for some analysis. If that data file is in the same directory (on your computer) as the .Rmd file (this file we are working on now), you don't need to specify a path.
+
+```{r}
+data_txt <- read.table("/Users/csmall/Dropbox/BiostatsFound_S2025/Graded_Assignments/PS_1/Gacu_lipids2_data.tsv",
+                       header=T, sep="\t", row.names=1,
+                       stringsAsFactors = TRUE)
+
+dim(data_txt)
+```
+
+Plot a histogram for gene 37
+
+```{r}
+hist(data_txt$Mass, col="blue",
+     main="Frequency Distribution of Mass",
+     xlab="Mass", ylab="Number of Fish")
+```
+
+
+But maybe we don't want to include the actual R code in the rendered output
+
+```{r echo=FALSE}
+hist(data_txt$Mass, col="blue",
+     main="Frequency Distribution of Mass",
+     xlab="Mass", ylab="Number of Fish")
+```
+
+
+Let's try adding some bash (UNIX) code that will appear as a distinct chunk in our .html. In this case we don't want the bash code to actually run, but maybe we want it documented.
+
+```{r engine = 'bash', eval = FALSE}
+for file in ./*.fasta
+do
+  grep -c '>' $file
+done
+```
+
+
