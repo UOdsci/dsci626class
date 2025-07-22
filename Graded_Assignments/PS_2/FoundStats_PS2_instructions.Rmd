@@ -1,0 +1,121 @@
+---
+title: "Problem Set 2 // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Instructions for completing Problem Set 2
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This is the second graded assignment for the course. It will be worth 100 points and is due by midnight on Friday, May 9th. To complete this assignment you will write your own RMarkdown file called `FoundStats_PS2.Rmd`, "knit" (render) the file to an `.html` output file, and upload **both files** to Canvas. Recall that you can use the skeleton of `FoundStats_PS1.Rmd` as a template for this assignment's `.Rmd` file. Please give plots and plot axes meaningful labels. In terms of what to include in the knitted `.html`, make sure that all of your code is echoed, and that any output requested in the instructions is evaluated. Things you probably don't want to have rendered in the `.html` include long printed vectors or data frames, and any large blocks of comments in your code that are not necessary for interpretation of the code. Remember that I can always look in your `.Rmd` file if I need to see any comments. 
+
+
+## An initial note on R Projects
+
+This isn't required, but I encourage you to get in the habit of organizing your Problem Sets (and your analysis project in general) as "R Projects." When you open an R Project, you will be able to store everything you need for a repeatable analysis (e.g. `.R`, `.Rmd`, and data files) in that R Project's directory on your computer. So, when you open an R Project you shouldn't need to reset the working directory or specify paths to files, provided that the files are in your project directory. R Projects also allow you to save your environment so that objects from a particular analysis can be saved and re-opened, as opposed to generated from scratch each time you start `RStudio`. To open an R Project simply click on File -> New Project, and select to use either a new directory or an existing one for your project.
+
+<br>
+
+## Part 1 - (Sampling distributions from a simulated, normal population, 40 pts)
+
+<br>
+
+1. **Simulate a measured variable from a population of 10,000 individuals.** Pretend that you are simulating the *entire population* of organisms, and that this variable is some normally distributed attribute of the organisms' size. To perform this simulation, draw 10,000 values from a normal distribution with mean 10 and standard deviation 2, and assign to a vector called `pop_sizes`. In the real world, for non-simulated data, we don't know the population parameters, (we often want to estimate them), but in this case we are all-knowing! Be sure to set the random number generator seed to 234 at the beginning of your `R` code chunk. Also verify that the population mean and standard deviation are 10 and 2, respectively, using `R` functions on your `pop_sizes` vector, plot a histogram of the distribution, and draw 3 vertical lines on the plot to show the mean and the mean +/- 1 standard deviation. Hint: check out the `abline()` function for the last part. (15 points) 
+
+<br>
+
+2. **Take a single random sample of 100 values from your simulated population.** This will imitate the process of taking a sample from a population, similar to what happens when we conduct a study or experiment in the real world. Make sure to sample *without replacement*, and name your vector of sampled values `samp100_sizes`. Also remember to set the random number seed (again to 234) at the beginning of this code chunk. Now calculate the *sample mean* and *sample standard deviation*. These are *point estimates* for your population parameters. Make a plot of the distribution similar to the one above in Question 1., but this time using `samp100_sizes`. Briefly comment on how similar the point estimates from `samp100_sizes` are to the known parameters of `pop_sizes`. (5 points)
+
+<br>
+
+3. **Take 100 samples of 100 values each from your simulated population.** The idea here is to repeat the sampling process 100 times to look at the *sampling distributions* for mean and standard deviation, assuming a sample size of 100. Again, set the random number seed to 234 at the beginning of the code chunk, and take each sample from `pop_sizes` *without replacement*. To accomplish this you will have to use one of the iterative `R` functions we learned about previously. Name your matrix of 100 samples `repsamps_100`. Now plot the distribution of the sample mean and the distribution of the sample standard deviation. These will help you visualize how much variation in the point estimates there is across our 100 samples. Hint: you will need to calculate a sample mean and sample standard deviation for each of the 100 samples (columns of values) in `repsamps_100`, which can be accomplished with an `R` function that we learned to use for "marginal" (either row- or column-wise) calculations. Describe these 2 histograms and what they tell us, in your own words. (10 points)    
+
+<br>
+
+4. **Take 101 samples of increasing sample size from your simulated population.** Now you will examine how the accuracy of point estimates changes over a range of sample sizes. You should set your sample sizes to range from 10 to 2010, in increments of 20. What we want to do here is calculate the mean and standard deviation from a sample of 10, then from a sample of 30, then from a sample of 50, and so on until a large sample of 2010. I have helped you get started with the code below. 
+
+```{r insamps_help, echo=TRUE, eval=FALSE}
+set.seed(234)
+incsamps_Ns <- #Fill in the code here to generate your vector of increasing sample sizes
+incsamps_means <- rep(NA, length(incsamps_Ns))
+incsamps_sds <- rep(NA, length(incsamps_Ns))
+  
+for (i in 1:length(incsamps_Ns)) {
+  incsamps_means[i] <- mean(sample(pop_sizes, size=incsamps_Ns[i]))
+  incsamps_sds[i] <- #Fill in the code here to build your vector of sample std. devs.
+}
+```
+
+<br>
+
+4. (continued) For each estimate of mean and standard deviation, calculate how different it is from the known population parameter (by taking the absolute value of the difference between the known population value and the estimate), and make scatter plots (one for mean and one for standard deviation) to show the relationship between "distance of estimate from known parameter value" (y-axis) and sample size (x-axis). Briefly describe in your own words what these plots are telling you about sample size. (10 points) 
+
+<br>
+
+## Part 2 - (Relationship between mean and variance, 20 pts)
+
+<br>
+
+5. **Generate a new population with 100-fold larger size values.** Next, you are going to heavily "right-shift" the distribution of sizes relative to your original population of 10,000. Simply multiply `pop_sizes` by 100 and call the new vector `pop_sizes_big`. You might think of this population as a different, much larger species of organism (recall our "mouse and elephant" example from lecture). Calculate the population mean and standard deviation of `pop_sizes_big`, and plot a histogram of the distribution (with the 3 vertical lines) like you did in question 1 above. (5 points)
+
+<br>
+
+6. Is there a difference between the standard deviations of `pop_sizes` and `pop_sizes_big`, and if so, is it expected? For both `pop_sizes` and `pop_sizes_big`, calculate and compare the mean-adjusted metric for the standard deviation we learned about in class. What is this metric called? (15 points)
+
+<br>
+
+## Part 3 - (Simulating data from the Poisson distribution, 20 pts)
+
+<br>
+
+7. **Simulate a Poisson-distributed variable from a population of 10,000 individuals.** Now let's say that we are interested in a discrete trait from our imaginary population of 10,000 individuals. The trait this time is the number of SNPs in a 10-kilobase genomic region of interest. Simulate these 10,000 values assuming a Poisson distribution with a lambda of 200, and name the vector `pop_pois`. Don't forget to set the seed (again to 234) at the beginning of your code chunk. (10 points)
+
+<br>
+
+8. Repeat what you did for Question 4 above, except instead of looking at the difference between known and estimated parameter values, calculate the absolute value of the difference between the estimated mean (using `mean()`) and the estimated variance (using `var()`) for each sample. Also like you did for Question 4, plot this value versus the sample size. Briefly comment on whether the dissimilarity between mean and variance changes with sample size, and why this matters for Poisson-distributed data. Hint: Think about one of the key properties of the Poisson distribution. (10 points) 
+
+<br>
+
+## Part 4 - (Estimating means with confidence intervals, 20 pts)
+
+<br>
+
+9. **Calculate 95% confidence intervals for samples of increasing size.** Working with your `pop_sizes` vector from Part 1, repeat what you in Question 4, but instead plot the 95% interval for the mean as a function of sample size. To calculate a 95% confidence interval for the population mean of a normally distributed variable, you can use the `t.test()` function. Again, I've provided some of the code below to get you started. (10 points)
+
+```{r sampcis_help, echo=TRUE, eval=FALSE}
+set.seed(234)
+incsamps_Ns <- #Fill in the code here to generate your vector of increasing sample sizes
+incsamps_CIlower <- rep(NA, length(incsamps_Ns))
+incsamps_CIupper <- rep(NA, length(incsamps_Ns))
+  
+for (i in 1:length(incsamps_Ns)) {
+  incsamps_CIlower[i] <- t.test(sample(pop_sizes, size=incsamps_Ns[i]))$conf.int[1]
+  incsamps_CIupper[i] <- #Fill in the code here to build your vector of upper CI limits
+}
+```
+
+<br>
+
+9. (continued) To plot the 95% CIs as vertical lines, we have to be a bit creative with `R` plotting functions. Complete the code below, and note the comments. 
+
+```{r sampcis_plot, echo=TRUE, eval=FALSE}
+## First, we need to draw an "empty" plot
+plot(incsamps_CIlower~incsamps_Ns, cex=.5, col="red", ylim=c(7,12), type="n")
+
+## Then, we add lines to the plot using the segments() function!
+## Replace the question marks with the proper arguments.
+segments(x0=incsamps_Ns, y0=incsamps_CIlower,
+      x1=?, y1=?, lwd=2)
+```
+
+<br>
+
+10. **For a real data set, calculate quartiles and produce a 95% confidence interval for the population mean.** Read in the data set `Gacu_lipids2_data.tsv` from Problem Set 1, plot a histogram of the variable `Mass`, and calcuate the 25%, 50%, and 75% quartiles. Does this sample of values appear to be normally distributed? Finally, estimate the population mean from the data and a 95% confidence interval for the true population mean, again using the `t.test()` function. (10 points)
+
+<br>

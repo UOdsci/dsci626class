@@ -1,0 +1,161 @@
+---
+title: "DSCI 626 Found Stats Data Sci: Problem Set 1"
+author: "Your Name"
+date: "April 25, 2025"
+output:
+  html_document: default
+---
+
+This is our first graded problem set it `R`! Follow the instructions below, and modify or complete any code within the specified `R` "chunks." If code chunks contain the function `set.seed()`, please leave those lines unchanged. The `set.seed()` function sets the seed of `R`'s random number generator so that any function that involves a non-deterministic algorithm will produce the same outcome if run repeatedly with the same arguments.
+
+
+## Part 1 (UNIX commands, 20 pts)
+
+For this part, you will work from your UNIX/Linux terminal (like you did in Ex1_Unix_intro), that is, not within R. You will, however, copy and paste the commands (and any results) from your UNIX/Linux command line into the code chunks below. That way, you can capture your UNIX/Linux work in this R document so that I can evaluate the code. I've got you started with a simple `pwd` example command from my terminal, but you should replace that text with your work.
+
+
+Download the file `Gacu_lipids2_data.tsv` from Canvas, and then, starting from your UNIX/Linux home directory (at the command line), make a directory called "PS_1", and copy (using an absolute path) `Gacu_lipids2_data.tsv` to that directory. Verify the file is in that directory by listing the directory's contents. (9 points)
+
+```{r engine = 'bash', eval = FALSE}
+## (My terminal prompt says: Claytons-MacBook-Pro:~ csmall$)
+pwd
+/Users/csmall
+
+
+
+```
+
+
+Using a UNIX command, count how many lines are in the file (3 points).
+
+```{r engine = 'bash', eval = FALSE}
+
+
+
+```
+
+
+Using UNIX commands (and using "pipes" to link commands), capture only lines that start with 2 characters followed by "_", sort the file numerically (lowest to highest) using the 5th field, and write the first 20 lines of that output to a file named `Gaculip_top20.txt`. Now, print the last 5 lines of `Gaculip_top20.txt` to the terminal. (8 points)
+
+```{r engine = 'bash', eval = FALSE}
+
+
+
+```
+
+
+
+## Part 2 (Defining and evaluating objects, 20 pts)
+
+For this part, you need only type code directly into the chunks below. If you want to evaluate your code, you can either run those chunks individually by clicking on the green "arrow" key at the top right corner of the chunk, or you can knit the whole document to run all code and inspect the rendered output. Any hints from me will be provided as commented lines in the code chunks.
+
+
+Generate a vector of numeric values ranging from 0 to -10, in decrements of 0.5, and assign the vector to an object named `dec_nums`. Next calculate the number of elements in the vector, using an `R` function. Finally, generate a new vector assigned to the name `dec_squares`, which contains each value in `dec_nums` taken to the second power. (6 points)
+
+```{r}
+
+
+```
+
+
+Modify the following code to generate a vector of 150 values drawn from a normal distribution with mean 0 and standard deviation 10, sort them in descending order, and index the first 20 of those sorted values. Remember to leave the `sed.seed()` line as is. (8 points)
+
+```{r}
+set.seed(166)
+
+sort(rnorm(50, 10, 5))[1]
+
+```
+
+
+Modify the following code to generate one vector of 15 numbers sampled randomly from values 1 through 100, and assign it to the name `randvec_1`. Then, generate another vector, assigned to `randvec_2`, which contains all of the numbers in `randvec_1` multiplied by 2, making sure to take advantage of vecotorized operations in `R`. Finally, using a logical operator, evaluate whether all elements in `randvec_1` are less than corresponding elements in `randvec_2`, again relying on a vectorized operation. The evaluation can just be run and printed to the document. (6 points)
+
+```{r}
+set.seed(166)
+
+noname_1 <- sample(seq(1, 10, 2), 2)
+
+## Below, define randvec_2, perform the multiplication, and perform the logical evaluation
+
+```
+
+
+
+## Part 3 (Working with lists and data frames, 20 pts)
+
+For this part, you need only type code directly into the chunks below. If you want to evaluate your code, you can either run those chunks individually by clicking on the green "arrow" key at the top right corner of the chunk, or you can knit the whole document to run all code and inspect the rendered output. Any hints will be provided as commented lines in the code chunks.
+
+
+Generate a list by combining your vectors `dec_squares`, `randvec_1`, and `randvec_2`, and call it `misc_list`. Using "square braces" indexing, return the 5th element of the second vector (originally `randvec_1`) in `misc_list`. (6 points)
+
+```{r}
+
+
+```
+
+
+Generate 2 vectors. The first should be of class **factor**, and it should consist of 10 elements labeled "control", followed by 10 elements labeled "treatment". Assign this vector as `exp_factor`. The second vector should consist of 20 values randomly drawn from a normal distribution with mean of 100 and a standard deviation of 10. Assign this vector as `exp_measures`. Now, combine these two vectors into a data frame assigned the name `exp_df`. Print the column names of `exp_df`. Finally, print the mean `exp_measures` values for control and treatment levels, respectively. (10 points) 
+
+```{r}
+set.seed(166)
+exp_factor <-
+exp_measures <-
+exp_df <-
+
+## To calculate the factor-level-wise means, you will need to use one of the functions from the "apply" function family.
+
+
+```
+
+
+Using the example data frame `iris`, which comes pre-loaded with base `R`, print the species-wise means for the product of sepal length and sepal width. You can use the same function from the "apply" family that you used for the previous problem. (4 points)
+
+```{r}
+
+
+```
+
+
+
+## Part 4 (Reading files and basic plotting, 20 pts)
+
+For this part, you need only type code directly into the chunks below. If you want to evaluate your code, you can either run those chunks individually by clicking on the green "arrow" key at the top right corner of the chunk, or you can knit the whole document to run all code and inspect the rendered output. Any hints will be provided as commented lines in the code chunks.
+
+
+Read in the file `Gacu_lipids2_data.tsv`, using the appropriate delimiter and assuming it has a header, and assign it to an object named `Gacu_lipids`. What class is `Gacu_lipids`, and how many rows and columns does it have (use `R` functions to print this information)? Subset `Gacu_lipids` to retain only observations that come from "RS", based on the "Population" column, and assign to an object named `Gacu_lipids_RS`. Return the number of rows and columns for `Gacu_lipids_RS`. (12 points)   
+
+```{r}
+Gacu_lipids <- read.delim()
+
+
+Gacu_lipids_RS <-
+
+```
+
+
+Using square brace indexing, print rows 1 through 10 of columns 4 and 5, from `Gacu_lipids`. (2 points)
+
+```{r}
+
+
+```
+
+
+Produce the folowing plot from `Gacu_lipids` using the code chunk below. Generate a scatterplot (using the `plot()` function) showing the relationship between TAGs and Mass. Put TAGs on the y-axis and Mass on the x-axis. For the axis labels, pretend that the units for TAGs are picograms and the units for Mass are milligrams. Color the points for RS individuals "blue" and the points for Bt individuals "dark green". (6 points)
+
+```{r}
+
+
+```
+
+
+
+## Part 5 (More plotting and RMarkdown, 20 pts)
+
+In the space below, write your own RMarkdown chunk so that the plot will be rendered in the final `.html` file, but so that the code will not be shown in the `.html` file. In terms of the plot itself, use the `Gacu_lipids` data frame to produce a boxplot that shows TAGs (on the y-axis), and all 4 Population-Microbiota factor level combinations (one box for each combination) on the x-axis. (20 points) 
+
+
+
+
+
+

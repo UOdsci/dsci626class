@@ -1,0 +1,57 @@
+---
+title: "Problem Set 3 // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+description: Instructions for completing Problem Set 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This is the third graded assignment for the course. It will be worth 100 points and is due by midnight on Friday, May 23rd. To complete this assignment you will write your own RMarkdown file called `FoundStats_PS3.Rmd`, "knit" (render) the file to an `.html` output file, and upload both files to Canvas. Recall that you can use the skeleton of `FoundStats_PS1.Rmd` as a template for this assignment's `.Rmd` file. Please give plots and plot axes meaningful labels. In terms of what to include in the knitted `.html`, make sure that all of your code is echoed, and that any output requested in the instructions is evaluated. Things you probably don't want to have rendered in the `.html` include long printed vectors or data frames, and any large blocks of comments in your code that are not necessary for interpretation of the code. Remember that I can always look in your `.Rmd` file if I need to see any comments. 
+
+
+## A reminder about R Projects
+
+I strongly encourage you to get in the habit of organizing these Problem Sets as "R Projects." When you open an R Project, you will be able to store everything you need for a repeatable analysis (e.g. `.R`, `.Rmd`, and data files) in that R Project's directory on your computer. So, when you open an R Project you shouldn't need to reset the working directory or specify paths to files, provided that the files are in your project directory. R Projects also allow you to save your environment so that objects from a particular analysis can be saved and re-opened, as opposed to generated from scratch each time you start `RStudio`. To open an R Project simply click on File -> New Project, and select to use either a new directory or an existing one for your project.
+
+
+## Introduction
+
+Your task for this assignment is to analyze the associated data set (zfish_diet.tsv) as if you generated it and are putting together an `RMarkdown` "analysis report" in preparation for eventual publication. You should address the questions about the data set using your `R` programming and analysis knowledge. This includes making the appropriate plots and conducting the appropriate analyses to visualize the data, examining distributional assumptions, and drawing statistically sound conclusions about the data set. The goal is to concisely and accurately present your results in figures, and short summaries of analyses, each of which is correctly labeled and annotated. Think of this as an initial run through of analysis that you would return to later as a guide for writing the results section of a paper. You want to include relatively brief, precisely worded statements about your findings and conclusions. 
+
+
+## The data set
+
+Say that you performed a study to determine whether or not feeding zebrafish with enriched brine shrimp nauplii (treated with a particular supplement) affects mean zebrafish size, as measured by standard length (SL) in millimeters. You expect that if anything, the enriched diet should produce longer fish, on average, relative to controls. You are also wondering whether there is a positive, linear relationship between standard length and body mass, as measured by wet weight in milligrams.
+
+<br>
+You sample 200 newly hatched zebrafish from the same clutch and randomly assign each to either an enriched shrimp diet or an unenriched shrimp (“control”) diet. Assume that you have carried out your experiment carefully and not confounded diet with any other variables that may affect size. After two months you measure the standard length and weight of all 200 fish. The tab-delimited file “zfish_diet.tsv” contains your data in four columns: “Individual,” “Diet,” “SL,” and “Weight”
+
+
+## Part 1 - (Stating hypotheses, 20 pts)
+
+State formally the null and alternative hypotheses relevant to your question about the effect of diet on fish standard length. Keep in mind you have an *a priori* expectation about how (i.e. the direction) the altered diet will affect your fish, as mentioned above.
+
+## Part 2 - (Data summary and visualization, 20 pts)
+
+Read the data file into R and perform a thorough exploration (visualization and summary) of the data. Produce relevant summary statistics (i.e. mean, standard error of the mean, and median) for SL in both control and experimental groups. In terms of plots, generate SL histograms for 1. the entire data set, 2. the control group, and 3. the enriched group, with the same axis limits in all three. Also produce a boxplot for SL with the two diet treatments shown as separate boxes. 
+
+Note - there are two mistakes that will pop out pretty quickly during initial data exploration (IDE) that were obvious data entry errors. You should fix the errors before you finalize your summary statistics, plots, and subsequent analyses in the next parts. (You can just change the text file accordingly and read in the fixed version.)
+
+## Part 3 - (Parametric *t*-test, 20 pts)
+
+Evaluate whether assumptions for a hypothesis test using the Student’s *t* distribution are met by the data, using your plots above and a test for equal variances. Then actually perform the appropriate parametric *t*-test of your null hypothesis stated in Part 1. Use `R` functions referenced in the course book, and make a clear, formal statement of your *t*-test results.
+
+## Part 4 - (Nonparametric *t*-test, 20 pts)
+
+Perform the same hypothesis test as in Part 3, but use a non-parametric approach (randomization in this case). Think about what test statistic you need to evaluate, and make sure you generate an adequate null distribution for the test statistic by randomizing (at least 1000 times). Plot the null distribution of the test statistic (calculated from your randomizations), and a vertical line marking the position of the test statistic value observed from the unshuffled data. Write the `R` code necessary to estimate a *p*-value for your randomization-based hypothesis test. Again, make a clear, formal statement of your hypothesis test results, and report whether the main result is the same for both parametric and nonparametric tests.
+
+## Part 5 - (Regression analysis, 20 pts)
+
+Evaluate whether there is a positive relationship between the two continuous variables for the full data set using ordinary least squares (OLS) linear regression, and assuming normality. For visualization, include a scatter plot in which the observations are colored differently by diet. Perform an examination of the residuals to determine whether the parametric assumptions of the linear model are met. Be sure to formally state your null and alternative hypotheses, and report the relevant hypothesis test results. Comment on why OLS may or may not be the best form of regression for this data set, and suggest alternatives (but don't actually do the analysis) if not. 

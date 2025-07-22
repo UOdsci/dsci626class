@@ -1,0 +1,33 @@
+---
+title: "Problem Set 1 instructions // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Instructions for completing the problem set using the FoundStats_PS1.Rmd
+  file
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This is the first graded assignment for the course. It will be worth 100 points and is due by midnight on Friday, April 25th. To complete this assignment you will add to the RMarkdown file `FoundStats_PS1.Rmd`, save your work, and then "knit" (render) the file to an `.html` output file. I am formatting this assignment this way to serve as a kind of easy introduction to RMarkdown format. For future graded problem sets you will not be given a pre-filled `.Rmd` file, but you can always use `FoundStats_PS1.Rmd` as a template to start your assignments!
+
+
+
+The first thing you will need to do (if you haven't already) is install the `rmarkdown` package, which you can do by opening up an `RStudio` session and typing the following command at the Console:
+
+```{r install rmarkdown, echo=TRUE, eval=FALSE}
+install.packages("rmarkdown")
+```
+
+
+
+Next you will want to download `FoundStats_PS1.Rmd` from Canvas and open it in `RStudio` by clicking File -> Open File. The file should open up in your upper left `RStudio` pane. Recall that this is the code editing region of the IDE. At this point you may want to click Save As, to save this `.Rmd` file using whatever location and file name you want.
+
+
+
+Now, simply follow the instructions in the file to complete the different sections. Make sure to perform any code modifications or writing of new code **within** the `R` "chunks." When you are all finished and ready to turn the work in, save the file and "knit" to `.html`, using the "Knit" dropdown button in your scripting pane toolbar at the top. This will save an `.html` file to your current working directory. Make sure to inspect your `.html` file in a web browser to ensure that the formatting is as expected and readable! Please upload your saved `.Rmd` file **and** your `.html` file to Canvas.

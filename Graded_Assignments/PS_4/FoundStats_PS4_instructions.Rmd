@@ -1,0 +1,80 @@
+---
+title: "Problem Set 4 // Foundational Statistics Data Sci. DSCI 626"
+layout: page
+description: Instructions for completing Problem Set 4
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+This is the fourth graded assignment for the course. It will be worth 100 points and is due by midnight on Monday, June 9th. To complete this assignment you will write your own RMarkdown file called `FoundStats_PS4.Rmd`, "knit" (render) the file to an `.html` output file, and upload both files to Canvas. Recall that you can use the skeleton of `FoundStats_PS1.Rmd` as a template for this assignment's `.Rmd` file. Please give plots and plot axes meaningful labels. In terms of what to include in the knitted `.html`, make sure that all of your code is echoed, and that any output requested in the instructions is evaluated. Things you probably don't want to have rendered in the `.html` include long printed vectors or data frames, and any large blocks of comments in your code that are not necessary for interpretation of the code. Remember that I can always look in your `.Rmd` file if I need to see any comments. 
+
+
+## A reminder about `R` Projects
+
+I strongly encourage you to get in the habit of organizing these Problem Sets as "R Projects." When you open an R Project, you will be able to store everything you need for a repeatable analysis (e.g. `.R`, `.Rmd`, and data files) in that R Project's directory on your computer. So, when you open an R Project you shouldn't need to reset the working directory or specify paths to files, provided that the files are in your project directory. R Projects also allow you to save your environment so that objects from a particular analysis can be saved and re-opened, as opposed to generated from scratch each time you start `RStudio`. To open an R Project simply click on File -> New Project, and select to use either a new directory or an existing one for your project.
+
+
+## Introduction
+
+Your task for this assignment is to perform some short, targeted analyses for two different data sets. Like Problem Set 3, your should perform the tasks as if you are leading the analysis, by putting together an `RMarkdown` "analysis report" in preparation for eventual publication. You should address the questions about the data set using your `R` programming and analysis knowledge. This includes making the appropriate plots and conducting the appropriate analyses to visualize the data, examine distributional assumptions, and draw statistically sound conclusions about the data set. The goal is to concisely and accurately present your results in figures, and short summaries of analyses, each of which is correctly labeled and annotated. Think of this as an initial run through of analysis that you would return to later as a guide for writing the results section of a paper. You want to include relatively brief, precisely worded statements about your findings and conclusions.
+
+
+## **Data set 1**
+
+Say that you performed a study to determine whether or not the levels of three different proteins measured by mass spectrometry (ERD10, NCED9 and SRK2D) in the root tissues of *Arabidopsis* plants are affected by two different factors (**Genotype** and **Water**). Values for the 3 proteins correspond to unitless signal intensity. The **Water** factor is a treatment that you applied at two levels: **control**, which is the normal amount of daily water, or a small amount of water 1/10 that of normal (**stress**). In addition, you performed the study on two different genotypes of plant (**Genotype**), those with a loss-of-function mutation in a gene encoding a heat shock chaperone protein (**mutant**) and those without the mutation (**wildtype**). Importantly, all 4 Genotype-Water factor level combinations are well replicated in the experiment.
+<br>
+For this analysis you will only focus on one of the response variables (ERD10 abundance). You are particularly interested in whether Genotype and Water treatments affect ERD10 abundance, but because the experimentally edited locus is a known stress resistance modulator, you also want to know if its influence on ERD10 abundance depends on the stress treatment.
+
+### Part 1 - (Experimental Design and Stating hypotheses, 5 pts)
+
+Identify what type of experimental design this is (i.e. what class of ANOVA you should run), and state formally all of the null and alternative hypotheses relevant to your question about ERD10 abundance. Include in this brief description whether Genotype and Water should be considered as fixed or random effects.
+
+### Part 2 - (Data summary and visualization, 20 pts)
+
+Read the data file `Plant_stress.tsv` into `R` and perform a thorough exploration (visualization and summarization) of the data. Produce relevant summary statistics (i.e. mean, standard error of the mean, and median) for ERD10 abundance in the four different groups. In terms of plots, produce a stripchart or boxplot (your choice) with all four groups separated. 
+
+### Part 3 - (ANOVA, 20 pts)
+
+Evaluate whether assumptions for the hypothesis tests associated with this ANOVA are met by the data, using your plots above. You can evaluate the assumption of equal variances across all four groups using a Bartlett's test (function `bartlett.test()`).
+<br>
+Perform your ANOVA by defining the model, and summarizing the output with the appropriate `R` functions. If you need help, refer to the appropriate example in the course book. Your output should be an ANOVA table, which includes degrees of freedom, SS, MS, *F*-ratios, and *p-values*. Summarize the results of your null hypothesis tests succinctly in a few sentences, similar to the way you would write the test results in a paper.
+<br>
+Finally, make an interaction plot and briefly describe the pattern you see and how it relates to your ANOVA hypothesis tests.
+
+<br>
+
+## **Data set 2**
+
+This data set was produced by Medley and Clements (1998) to understand how heavy metals contamination influences the diversity of diatoms in (Rocky Mountains) streams in the Western U.S. The file `medley.csv` contains the response variable (**DIVERSITY**) and two explanatory variables (**STREAM** and **ZINC**).
+
+<br>
+Your primary interest here is to test whether four specific levels of the zinc factor (**LOW**, **MED**, **HIGH**, and **BACK**) influence diatom diversity using single-factor ANOVA. You not only want to know whether there is a general effect of ZINC on DIVERSITY, but also whether the four levels are different from each other.
+
+### Part 4 - (Stating ANOVA hypotheses, 5 pts)
+
+Granted that we know this is a case for single-factor ANOVA, state formally the null and alternative hypothesis relevant to your question about DIVERSITY with respect to ZINC levels. Also state whether ZINC should be understood as a fixed or random effect in this context.
+
+### Part 5 - (Data summary and visualization, 20 pts)
+
+Read the data file `medley.csv` into `R` and perform a thorough exploration (visualization and summarization) of the data. Produce relevant summary statistics (i.e. mean, standard error of the mean, and median) for DIVERSITY in the four different groups. In terms of plots, produce a stripchart or boxplot (your choice) with all four groups separated.
+
+### Part 6 - (ANOVA, 20 pts)
+
+Evaluate whether assumptions for the hypothesis tests associated with this ANOVA are met by the data, using your plots above, or any additional ones if you prefer. Again, you can evaluate the assumption of equal variances across all four groups using a Bartlett's test (function `bartlett.test()`).
+
+<br>
+Perform your ANOVA by defining the model, and summarizing the output with the appropriate `R` functions. If you need help, refer to the appropriate example in the course book. Your output should be an ANOVA table, which includes degrees of freedom, SS, MS, an *F*-ratio, and a *p-value*. Summarize the results of your null hypothesis test succinctly in one or two sentences, similar to the way you would write the test results in a paper.
+
+<br>
+Finally, because you want to know more about which groups are actually different, perform a Tukey's test of post-hoc comparisons, make sure to include the summary in your report, and briefly describe the among-group differences in words.
+
+### Part 7 (Test of Independence, 10 pts)
+
+After you perform the single-factor ANOVA you realize that it is possible your ZINC factor levels may not be independent from the streams that were sampled in the study. If ZINC and STREAM are not independent, your conclusions about the direct effects of ZINC on DIVERSITY would be called into question, and a reanalysis including STREAM in the model would be required. To address this, perform a G-test of independence to test the null hypothesis that relative proportions of ZINC levels are independent of STREAM. Report the value of *G*, the df, and the *p*-value for your test, and discuss whether you should reconsider your single-factor ANOVA above, and if so, how you might change things. (***You don't need to actually re-do the analysis, though!***)
